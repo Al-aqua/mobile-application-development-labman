@@ -101,26 +101,28 @@
 
 ---
 
-### **Lab 5: Advanced State Management with Provider**
+### **Lab 5: Advanced State Management with Riverpod**
 
 **Objectives:**
 
 - Understand limitations of setState
-- Implement Provider pattern
-- Create data models and services
+- Implement Riverpod state management
+- Create providers and notifiers
 - Separate business logic from UI
 
 **Project Component:**
 
 - Create Transaction model class
-- Implement TransactionProvider for state management
-- Refactor existing code to use Provider
-- Add category management functionality
+- Implement StateNotifierProvider for transaction management
+- Refactor existing code to use Riverpod
+- Add category management with providers
 
 **Key Concepts:**
 
-- Provider package setup
-- ChangeNotifier and Consumer widgets
+- Riverpod package setup and ProviderScope
+- StateNotifier and StateNotifierProvider
+- Consumer and ConsumerWidget
+- Provider types (Provider, StateProvider, FutureProvider)
 - Model classes and data structures
 - Separation of concerns
 
@@ -238,8 +240,6 @@
 
 **Project Component:**
 
-- Add data visualization (charts/graphs)
-- Implement export functionality (CSV/PDF)
 - Add app theming and dark mode
 - Create app store-ready build
 
