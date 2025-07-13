@@ -1,153 +1,253 @@
-# **Course Outline: Mobile Application Development with Flutter**
+# Mobile Application Development with Flutter
 
-# **Lab 1: Introduction to Flutter and Setting Up the Environment**
+## Personal Finance Tracker Course Outline
 
-- **Objective**: Familiarize students with Flutter, Dart, and the development environment.
-- **Topics Covered**:
-  - What is Flutter? Why use it for mobile development?
-  - Installing Flutter SDK and setting up Android Studio/VS Code.
-  - Creating a new Flutter project.
-  - Overview of the Flutter project structure.
-  - Running the app on an emulator or physical device.
-- **Practical Task**:
-  - Create a simple "Hello World" app.
-  - Customize the app's theme (e.g., change colors, fonts).
+### **Lab 1: Introduction to Flutter and Setting Up the Environment**
 
----
+**Objectives:**
 
-## **Lab 2: Building the Basic UI for the Finance Tracker**
+- Install Flutter SDK and development environment
+- Create first Flutter project
+- Understand project structure
+- Build and run a simple "Hello World" app
 
-- **Objective**: Teach students how to build a basic user interface using Flutter widgets.
-- **Topics Covered**:
-  - Introduction to Flutter widgets (StatelessWidget, Scaffold, AppBar, etc.).
-  - Layout basics: Column, Row, Container, ListView.
-  - Adding input fields (TextField) and buttons (ElevatedButton).
-- **Practical Task**:
-  - Build a simple UI for the app:
-    - A home screen with a title and a button to add a new transaction.
-    - A placeholder list for transactions.
+**Project Component:**
+
+- Create the base Personal Finance Tracker project
+- Set up app name, icon, and basic configuration
+- Run the app on emulator/device
+
+**Key Concepts:**
+
+- Flutter architecture overview
+- Dart basics
+- Hot reload and hot restart
+- Project structure (lib, pubspec.yaml, etc.)
 
 ---
 
-## **Lab 3: Understanding State Management (Part 1: setState)**
+### **Lab 2: Flutter Widgets and Layout Fundamentals**
 
-- **Objective**: Introduce state management using `setState` for simple state updates.
-- **Topics Covered**:
-  - Difference between StatelessWidget and StatefulWidget.
-  - Managing state with `setState`.
-  - Handling user input with controllers (TextEditingController).
-- **Practical Task**:
-  - Add functionality to the "Add Transaction" button:
-    - Open a modal to input transaction details (e.g., title, amount).
-    - Save the transaction and display it in the list.
+**Objectives:**
 
----
+- Master core widgets: Container, Column, Row, Text, Icon
+- Understand layout principles and widget tree
+- Create responsive layouts
+- Style widgets with colors, padding, and margins
 
-## **Lab 4: Understanding State Management (Part 2: Provider)**
+**Project Component:**
 
-- **Objective**: Introduce `Provider` for more scalable state management.
-- **Topics Covered**:
-  - Why use `Provider`? Limitations of `setState`.
-  - Setting up `Provider` in a Flutter app.
-  - Creating and using a ChangeNotifier for managing app state.
-- **Practical Task**:
-  - Refactor the app to use `Provider` for managing the list of transactions.
-  - Add a total balance display that updates dynamically.
+- Design the main dashboard UI
+- Create expense/income summary cards
+- Build basic navigation structure with AppBar and BottomNavigationBar
+
+**Key Concepts:**
+
+- Stateless vs Stateful widgets
+- Widget composition
+- Layout widgets (Column, Row, Stack, Expanded)
+- Styling and theming basics
 
 ---
 
-## **Lab 5: Navigation and Routing**
+### **Lab 3: Lists and Basic User Interface Components**
 
-- **Objective**: Teach students how to navigate between screens in Flutter.
-- **Topics Covered**:
-  - Using `Navigator` for screen transitions.
-  - Passing data between screens.
-  - Using named routes for cleaner navigation.
-- **Practical Task**:
-  - Add a "Transaction Details" screen:
-    - Display detailed information about a selected transaction.
-    - Navigate back to the home screen.
+**Objectives:**
 
----
+- Implement ListView and ListTile widgets
+- Create static forms and input fields
+- Understand basic widget interactions
+- Build reusable UI components
 
-## **Lab 6: Working with RESTful APIs**
+**Project Component:**
 
-- **Objective**: Teach students how to fetch and send data using RESTful APIs.
-- **Topics Covered**:
-  - Introduction to HTTP requests in Flutter using the `http` package.
-  - Fetching data from a REST API.
-  - Sending POST requests to save data.
-- **Practical Task**:
-  - Simulate a backend API for transactions (e.g., using a mock API like JSONPlaceholder or Mockoon).
-  - Fetch transactions from the API and display them in the app.
-  - Add a feature to save new transactions to the API.
+- Create static transaction list view with mock data
+- Build "Add Transaction" form UI (without functionality)
+- Design transaction cards/tiles
+- Add floating action button (UI only)
+
+**Key Concepts:**
+
+- ListView.builder for dynamic lists
+- TextField widgets (without controllers yet)
+- Basic form layouts
+- UI composition and reusable widgets
 
 ---
 
-## **Lab 7: Local Data Storage with SQLite**
+### **Lab 4: State Management with setState and Controllers**
 
-- **Objective**: Teach students how to store and retrieve data locally using SQLite.
-- **Topics Covered**:
-  - Introduction to local databases and the `sqflite` package.
-  - Setting up SQLite in a Flutter app.
-  - Performing CRUD operations (Create, Read, Update, Delete).
-- **Practical Task**:
-  - Save transactions locally in an SQLite database.
-  - Load transactions from the database when the app starts.
-  - Add a feature to delete a transaction.
+**Objectives:**
 
----
+- Understand state management concepts
+- Master setState() for local state
+- Work with TextEditingController
+- Handle form data and user interactions
 
-## **Lab 8: Firebase Integration (Part 1: Authentication)**
+**Project Component:**
 
-- **Objective**: Introduce Firebase and implement user authentication.
-- **Topics Covered**:
-  - Setting up Firebase for the Flutter app.
-  - Adding Firebase Authentication to the app.
-  - Implementing email/password login and signup.
-- **Practical Task**:
-  - Add a login screen to the app.
-  - Restrict access to the finance tracker to authenticated users only.
+- Connect TextEditingControllers to form fields
+- Implement transaction addition with setState
+- Add form validation and error handling
+- Make the transaction list dynamic
 
----
+**Key Concepts:**
 
-## **Lab 9: Firebase Integration (Part 2: Firestore Database)**
-
-- **Objective**: Use Firebase Firestore for cloud-based data storage.
-- **Topics Covered**:
-  - Introduction to Firestore and its advantages.
-  - Setting up Firestore in the Flutter app.
-  - Performing CRUD operations with Firestore.
-- **Practical Task**:
-  - Save transactions to Firestore instead of SQLite.
-  - Sync transactions across devices for the same user.
+- StatefulWidget lifecycle
+- TextEditingController management
+- setState() for updating UI
+- Form controllers and data handling
+- Input validation
 
 ---
 
-## **Lab 10: Finalizing and Deploying the App**
+### **Lab 5: Advanced State Management with Provider**
 
-- **Objective**: Teach students how to polish and deploy their app.
-- **Topics Covered**:
-  - Adding app icons and splash screens.
-  - Debugging and testing the app.
-  - Building APKs for Android and preparing for iOS deployment.
-  - Publishing the app to the Google Play Store (optional).
-- **Practical Task**:
-  - Finalize the Personal Finance Tracker app.
-  - Add finishing touches (e.g., input validation, error handling).
-  - Generate a release APK for the app.
+**Objectives:**
+
+- Understand limitations of setState
+- Implement Provider pattern
+- Create data models and services
+- Separate business logic from UI
+
+**Project Component:**
+
+- Create Transaction model class
+- Implement TransactionProvider for state management
+- Refactor existing code to use Provider
+- Add category management functionality
+
+**Key Concepts:**
+
+- Provider package setup
+- ChangeNotifier and Consumer widgets
+- Model classes and data structures
+- Separation of concerns
 
 ---
 
-# **Key Deliverables**
+### **Lab 6: Navigation and Multi-Screen Apps**
 
-By the end of the course, students will:
+**Objectives:**
 
-1. Understand the basics of Flutter and Dart.
-2. Be able to build fully functional mobile apps.
-3. Learn state management techniques (`setState` and `Provider`).
-4. Work with RESTful APIs and local databases (SQLite).
-5. Integrate Firebase for authentication and cloud storage.
-6. Deploy their app to a mobile device or app store.
+- Implement navigation between screens
+- Pass data between routes
+- Create tabbed interfaces
+- Handle back navigation and app lifecycle
+
+**Project Component:**
+
+- Create separate screens: Dashboard, Transactions, Categories, Settings
+- Implement bottom navigation
+- Add transaction detail screen
+- Create settings screen with user preferences
+
+**Key Concepts:**
+
+- Navigator and routing
+- MaterialPageRoute and named routes
+- Passing data with route arguments
+- TabBar and TabBarView
+
+---
+
+### **Lab 7: Local Data Persistence with SQLite**
+
+**Objectives:**
+
+- Set up SQLite database
+- Create database schema
+- Implement CRUD operations
+- Handle database migrations
+
+**Project Component:**
+
+- Create database helper class
+- Implement transaction storage and retrieval
+- Add data persistence for categories
+- Implement search and filtering functionality
+
+**Key Concepts:**
+
+- sqflite package
+- Database design and SQL basics
+- Async/await and Future handling
+- Data access layer pattern
+
+---
+
+### **Lab 8: Working with RESTful APIs**
+
+**Objectives:**
+
+- Understand HTTP requests and responses
+- Implement API integration
+- Handle network errors and loading states
+- Parse JSON data
+
+**Project Component:**
+
+- Integrate currency exchange rate API
+- Add expense categorization with external API
+- Implement data synchronization
+- Add network connectivity checks
+
+**Key Concepts:**
+
+- http package and API calls
+- JSON serialization/deserialization
+- Error handling and try-catch
+- FutureBuilder widget
+- Loading indicators and user feedback
+
+---
+
+### **Lab 9: Firebase Integration and Cloud Storage**
+
+**Objectives:**
+
+- Set up Firebase project
+- Implement user authentication
+- Store data in Firestore
+- Handle real-time data updates
+
+**Project Component:**
+
+- Add user registration and login
+- Sync transactions to cloud
+- Implement multi-device data access
+- Add backup and restore functionality
+
+**Key Concepts:**
+
+- Firebase setup and configuration
+- Firebase Auth for user management
+- Firestore database operations
+- StreamBuilder for real-time updates
+
+---
+
+### **Lab 10: App Polish, Testing, and Deployment**
+
+**Objectives:**
+
+- Add app icons and splash screens
+- Implement error handling and user feedback
+- Write basic unit tests
+- Prepare app for deployment
+
+**Project Component:**
+
+- Add data visualization (charts/graphs)
+- Implement export functionality (CSV/PDF)
+- Add app theming and dark mode
+- Create app store-ready build
+
+**Key Concepts:**
+
+- App deployment process
+- Testing strategies
+- Performance optimization
+- User experience best practices
 
 ---
