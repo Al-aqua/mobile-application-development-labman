@@ -14,13 +14,11 @@
 **Project Component:**
 
 - Create the base Personal Finance Tracker project
-- Set up app name, icon, and basic configuration
 - Run the app on emulator/device
 
 **Key Concepts:**
 
 - Flutter architecture overview
-- Dart basics
 - Hot reload and hot restart
 - Project structure (lib, pubspec.yaml, etc.)
 
@@ -43,7 +41,6 @@
 
 **Key Concepts:**
 
-- Stateless vs Stateful widgets
 - Widget composition
 - Layout widgets (Column, Row, Stack, Expanded)
 - Styling and theming basics
