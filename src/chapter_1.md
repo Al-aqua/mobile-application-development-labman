@@ -1,223 +1,155 @@
-# Lab 1: Introduction to Flutter and Setting Up the Environment
+# Lab 1: Introduction to Flutter - Personal Finance Tracker
 
-## Learning Objectives
+## Objectives
 
-By the end of this lab, students will be able to:
-
-- Install Flutter SDK and set up the development environment
-- Create their first Flutter project
-- Understand the Flutter project structure
-- Build and run a simple "Hello World" app
-- Create the base Personal Finance Tracker project
-
----
+- Set up Flutter development environment
+- Create your first Flutter application
+- Understand basic Flutter concepts and hot reload
+- Build the initial shell of your finance tracker app
 
 ## Prerequisites
 
-- Basic programming knowledge (preferably Dart or similar language)
-- Computer with at least 8GB RAM
-- Stable internet connection for downloads
+- Basic programming knowledge
+- Computer with Windows, macOS, or Linux
+- Minimum 8GB RAM recommended
+- At least 10GB of free disk space
 
----
+## Setup Instructions
 
-## Part 1: Environment Setup
-
-### Step 1: Install Flutter SDK
+### 1. Install Flutter SDK
 
 #### For Windows:
 
-1. Download Flutter SDK from [flutter.dev](https://flutter.dev)
-2. Extract the zip file to `C:\flutter` (avoid spaces in path)
+1. Download the Flutter SDK from [flutter.dev/docs/get-started/install/windows](https://flutter.dev/docs/get-started/install/windows)
+2. Extract the zip file to a location like `C:\src\flutter` (avoid spaces in the path)
 3. Add Flutter to your PATH:
-   - Open System Properties → Advanced → Environment Variables
-   - Add `C:\flutter\bin` to your PATH variable
-4. Open Command Prompt and run:
-   ```bash
-   flutter doctor
-   ```
+   - Search for "Environment Variables" in Windows search
+   - Click "Edit the system environment variables"
+   - Click "Environment Variables"
+   - Under "System variables", find and select "Path"
+   - Click "Edit" and add the path to `flutter\bin` directory
+   - Click "OK" to save
 
 #### For macOS:
 
-1. Download Flutter SDK from [flutter.dev](https://flutter.dev)
-2. Extract to your home directory: `~/flutter`
-3. Add to PATH by editing `~/.zshrc` or `~/.bash_profile`:
-   ```bash
-   export PATH="$PATH:$HOME/flutter/bin"
-   ```
-4. Run:
-   ```bash
-   source ~/.zshrc
-   flutter doctor
-   ```
+1. Download the Flutter SDK from [flutter.dev/docs/get-started/install/macos](https://flutter.dev/docs/get-started/install/macos)
+2. Extract the file to a location like `~/development`
+3. Add Flutter to your PATH:
+   - Open Terminal
+   - Run `nano ~/.zshrc` or `nano ~/.bash_profile` (depending on your shell)
+   - Add `export PATH="$PATH:[PATH_TO_FLUTTER_DIRECTORY]/flutter/bin"`
+   - Save and exit (Ctrl+X, then Y)
+   - Run `source ~/.zshrc` or `source ~/.bash_profile`
 
 #### For Linux:
 
-1. Download Flutter SDK
-2. Extract to `~/flutter`
-3. Add to PATH in `~/.bashrc`:
-   ```bash
-   export PATH="$PATH:$HOME/flutter/bin"
+1. Download the Flutter SDK from [flutter.dev/docs/get-started/install/linux](https://flutter.dev/docs/get-started/install/linux)
+2. Extract to a location like `~/development/flutter`
+3. Add Flutter to your PATH:
+   - Run `nano ~/.bashrc`
+   - Add `export PATH="$PATH:[PATH_TO_FLUTTER_DIRECTORY]/flutter/bin"`
+   - Save and exit (Ctrl+X, then Y)
+   - Run `source ~/.bashrc`
+
+### 2. Install an IDE
+
+Choose one of the following:
+
+#### Visual Studio Code (Recommended for beginners):
+
+1. Download and install from [code.visualstudio.com](https://code.visualstudio.com/)
+2. Open VS Code and install the Flutter extension:
+   - Click on Extensions icon on the left sidebar
+   - Search for "Flutter"
+   - Click "Install" on the Flutter extension by Dart Code
+
+#### Android Studio:
+
+1. Download and install from [developer.android.com/studio](https://developer.android.com/studio)
+2. Open Android Studio and install the Flutter plugin:
+   - Go to Preferences/Settings > Plugins
+   - Search for "Flutter"
+   - Click "Install" and restart Android Studio when prompted
+
+### 3. Set up an Emulator or Connect a Physical Device
+
+#### Android Emulator:
+
+1. Open Android Studio
+2. Click on "AVD Manager" (Android Virtual Device Manager)
+3. Click "Create Virtual Device"
+4. Select a phone (like Pixel 8) and click "Next"
+5. Download a system image (recommend API 30 or newer) and click "Next"
+6. Name your emulator and click "Finish"
+
+#### iOS Simulator (macOS only):
+
+1. Install Xcode from the App Store
+2. Open Xcode and accept the license agreement
+3. Install additional components if prompted
+4. Open Terminal and run `open -a Simulator`
+
+#### Physical Device:
+
+- For Android: Enable Developer Options and USB Debugging on your device
+- For iOS: Register as an Apple Developer and set up your device in Xcode
+
+### 4. Verify Installation
+
+1. Open Terminal or Command Prompt
+2. Run `flutter doctor`
+3. Address any issues that appear with red X marks
+4. When most items have green checkmarks, you're ready to proceed
+
+## Creating Your First Flutter App
+
+### 1. Create a New Flutter Project
+
+1. Open Terminal or Command Prompt
+2. Navigate to your desired project location
+3. Run the following command:
    ```
-4. Run:
-   ```bash
-   source ~/.bashrc
-   flutter doctor
-   ```
-
-### Step 2: Install Android Studio
-
-1. Download Android Studio from [developer.android.com](https://developer.android.com/studio)
-2. Install with default settings
-3. Open Android Studio and install:
-   - Android SDK
-   - Android SDK Platform-Tools
-   - Android SDK Build-Tools
-   - Flutter plugin
-   - Dart plugin
-
-### Step 3: Set up Android Emulator
-
-1. In Android Studio, go to Tools → AVD Manager
-2. Create Virtual Device → Choose Pixel 4 → API 30 (Android 11)
-3. Click Finish and launch the emulator
-
-### Step 4: Verify Installation
-
-Run the following command and ensure all items have checkmarks:
-
-```bash
-flutter doctor
-```
-
-**Expected Output:**
-
-```
-Doctor summary (to see all details, run flutter doctor -v):
-[✓] Flutter (Channel stable, 3.x.x, on Microsoft Windows, locale en-US)
-[✓] Android toolchain - develop for Android devices
-[✓] Android Studio (version 2023.x)
-[✓] Connected device (1 available)
-[✓] Network resources
-```
-
----
-
-## Part 2: Creating Your First Flutter Project
-
-### Step 1: Create a New Project
-
-1. Open terminal/command prompt
-2. Navigate to your desired directory
-3. Create a new Flutter project:
-   ```bash
    flutter create personal_finance_tracker
    ```
-4. Navigate into the project:
-   ```bash
+4. Wait for the project to be created
+5. Navigate into the project directory:
+   ```
    cd personal_finance_tracker
    ```
 
-### Step 2: Open in IDE
+### 2. Explore the Project Structure
 
-**Option A: Android Studio**
+Open the project in your IDE and explore the key files:
 
-1. Open Android Studio
-2. File → Open → Select your project folder
+- `lib/main.dart` - Main entry point of your application
+- `pubspec.yaml` - Project configuration and dependencies
+- `android/` and `ios/` - Platform-specific code
 
-**Option B: VS Code**
+### 3. Run the Default App
 
-1. Install Flutter and Dart extensions
-2. Open project folder in VS Code
-
-### Step 3: Run the Default App
-
-1. Start your emulator
-2. Run the app:
-   ```bash
+1. Start your emulator or connect your physical device
+2. In Terminal/Command Prompt (in your project directory), run:
+   ```
    flutter run
    ```
-3. You should see a counter app with a floating action button
+3. Wait for the app to compile and launch
+4. You should see the default Flutter counter app
 
----
+### 4. Understand Hot Reload
 
-## Part 3: Understanding Project Structure
+1. With the app running, open `lib/main.dart` in your IDE
+2. Find the text `'Flutter Demo'` and change it to `'My Finance Tracker'`
+3. Save the file
+4. Notice how the app updates immediately without restarting - this is hot reload!
+5. Try changing the colors or counter text to experiment further
 
-### Key Files and Folders:
+## Building the Finance Tracker Shell
 
-```
-personal_finance_tracker/
-├── android/                 # Android-specific files
-├── ios/                    # iOS-specific files
-├── lib/                    # Main Dart code
-│   └── main.dart          # Entry point of the app
-├── test/                   # Test files
-├── pubspec.yaml           # Project configuration & dependencies
-└── README.md              # Project documentation
-```
+Now that you understand the basics, let's create the initial shell for your finance tracker app.
 
-### Important Files Explained:
+### 1. Clean the Default App
 
-#### `pubspec.yaml`
-
-This is your project's configuration file:
-
-```yaml
-name: personal_finance_tracker
-description: A new Flutter project.
-version: 1.0.0+1
-
-environment:
-  sdk: ">=3.0.0 <4.0.0"
-
-dependencies:
-  flutter:
-    sdk: flutter
-  cupertino_icons: ^1.0.2
-
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^2.0.0
-
-flutter:
-  uses-material-design: true
-```
-
-#### `lib/main.dart`
-
-The entry point of your Flutter app:
-
-```dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-```
-
----
-
-## Part 4: Building Your Personal Finance Tracker Base
-
-### Step 1: Modify main.dart
-
-Replace the content of `lib/main.dart` with:
+Replace the entire content of `lib/main.dart` with this simplified code:
 
 ```dart
 import 'package:flutter/material.dart';
@@ -257,26 +189,16 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.account_balance_wallet,
-              size: 100,
-              color: Colors.green,
-            ),
+            Icon(Icons.account_balance_wallet, size: 100, color: Colors.green),
             SizedBox(height: 20),
             Text(
               'Welcome to Your Finance Tracker!',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
             Text(
               'Track your expenses and income',
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.grey,
-              ),
+              style: TextStyle(fontSize: 16, color: Colors.grey),
             ),
           ],
         ),
@@ -286,111 +208,109 @@ class DashboardScreen extends StatelessWidget {
 }
 ```
 
-### Step 2: Test Hot Reload
+### 2. Save and Run the App
 
 1. Save the file
-2. In your terminal where the app is running, press `r` for hot reload
-3. You should see the changes immediately without restarting
+2. If the app is already running, it will hot reload
+3. If not, run `flutter run` in the terminal
 
-### Step 3: Understanding the Code
+### 3. Understand the Code
 
-**Key Components:**
+Let's break down what this code does:
 
-- `main()`: Entry point that runs the app
-- `MaterialApp`: Root widget that provides Material Design
-- `Scaffold`: Basic layout structure with AppBar and body
-- `AppBar`: Top navigation bar
-- `Center`: Centers its child widget
-- `Column`: Arranges children vertically
-- `Icon` and `Text`: UI elements for display
+- `void main()` - The entry point of the app that runs our main app widget
+- `PersonalFinanceApp` - A StatelessWidget that sets up the MaterialApp
+  - `MaterialApp` - Provides the overall structure and theme
+  - `title` - The title shown in recent apps on mobile devices
+  - `theme` - The color scheme and visual properties
+  - `home` - The main widget to display
 
----
+- `HomePage` - A StatelessWidget that creates our main screen
+  - `Scaffold` - Provides the basic material design layout
+  - `AppBar` - The top bar with the app title
+  - `body` - The main content area
 
-## Part 5: Flutter Architecture Overview
+## Lab Exercises
 
-### Widget Tree Concept
+### Exercise 1: Customize the App Theme
 
-Flutter uses a widget tree where everything is a widget:
+Change the primary color to a color of your choice. Try different colors from the `Colors` class, such as `Colors.blue`, `Colors.purple`, or `Colors.teal`.
 
-```
-PersonalFinanceApp
-└── MaterialApp
-    └── DashboardScreen
-        └── Scaffold
-            ├── AppBar
-            │   └── Text
-            └── Center
-                └── Column
-                    ├── Icon
-                    ├── SizedBox
-                    ├── Text
-                    ├── SizedBox
-                    └── Text
-```
+### Exercise 2: Add an App Icon to the AppBar
 
-### Hot Reload vs Hot Restart
-
-- **Hot Reload (r)**: Updates code changes while preserving app state
-- **Hot Restart (R)**: Restarts the app completely, losing state
-
----
-
-## Part 6: Practical Exercises
-
-### Exercise 1: Customize the App
-
-1. Change the app title in the AppBar
-2. Modify the welcome message
-3. Change the icon color to blue
-4. Add your name to the subtitle
-
-### Exercise 2: Add More Content
-
-Add this after the existing Column children:
+Modify the AppBar to include an icon. Add this before the title:
 
 ```dart
-const SizedBox(height: 30),
-Container(
-  padding: const EdgeInsets.all(16),
-  margin: const EdgeInsets.symmetric(horizontal: 20),
-  decoration: BoxDecoration(
-    color: Colors.green.shade50,
-    borderRadius: BorderRadius.circular(10),
-  ),
-  child: const Text(
-    'Coming Soon: Track your daily expenses and manage your budget effectively!',
-    textAlign: TextAlign.center,
-    style: TextStyle(fontSize: 14),
-  ),
+leading: Icon(Icons.account_balance_wallet),
+```
+
+### Exercise 3: Add a Simple Action Button
+
+Add a floating action button that will eventually be used to add transactions:
+
+```dart
+floatingActionButton: FloatingActionButton(
+  onPressed: () {
+    // Will implement this in future labs
+    debugPrint('Button pressed!');
+  },
+  tooltip: 'Add Transaction',
+  child: Icon(Icons.add),
 ),
 ```
 
-### Exercise 3: Experiment with Hot Reload
+### Exercise 4: Create a Simple Footer
 
-1. Change colors and see instant updates
-2. Modify text content
-3. Try changing the icon
+Add a bottom navigation bar that will be expanded in future labs:
 
----
+```dart
+bottomNavigationBar: BottomNavigationBar(
+  items: [
+    BottomNavigationBarItem(
+      icon: Icon(Icons.home),
+      label: 'Home',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.pie_chart),
+      label: 'Statistics',
+    ),
+    BottomNavigationBarItem(
+      icon: Icon(Icons.settings),
+      label: 'Settings',
+    ),
+  ],
+  currentIndex: 0,
+  onTap: (index) {
+    // Will implement navigation in future labs
+    debugPrint('Tapped item $index');
+  },
+),
+```
 
-### Next Lab Preview:
+## Deliverables
 
-In Lab 2, we'll dive deeper into Flutter widgets and create the dashboard UI with expense/income cards and navigation structure.
+By the end of this lab, you should have:
 
----
+1. A working Flutter development environment
+2. A basic understanding of Flutter project structure
+3. Experience with hot reload
+4. A simple app shell for your finance tracker with:
+   - Customized app title
+   - Basic theme
+   - App bar
+   - Floating action button
+   - Bottom navigation bar
 
-## Homework Assignment
+## Troubleshooting Common Issues
 
-1. **Customize Your App**: Change the theme color, app title, and welcome message
-2. **Experiment**: Try adding different icons and text styles
+1. **Flutter Doctor Shows Errors**: Follow the suggestions provided by the `flutter doctor` command to resolve each issue.
 
----
+2. **App Won't Run**: Ensure your emulator is running or device is connected and recognized by running `flutter devices`.
 
-## Resources for Further Learning
+3. **Hot Reload Not Working**: Make sure you're saving the file and that there are no syntax errors.
 
-- [Flutter Documentation](https://flutter.dev/docs)
-- [Dart Language Tour](https://dart.dev/guides/language/language-tour)
-- [Flutter Widget Catalog](https://flutter.dev/docs/development/ui/widgets)
-- [Flutter YouTube Channel](https://www.youtube.com/c/flutterdev)
+4. **Missing Dependencies**: If you see errors about missing packages, run `flutter pub get` in your project directory.
 
-**Remember:** Don't worry if everything doesn't make perfect sense yet. We'll build upon these concepts in each subsequent lab!
+## Next Steps
+
+In the next lab, we'll expand our app by adding widgets and layouts to create a proper dashboard for our finance tracker.
