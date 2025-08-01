@@ -1,6 +1,7 @@
 # Summary
 
+- [Cover](./cover.md)
 - [Course Outline](./outline.md)
-- [Chapter 1](./chapter_1.md)
-- [Chapter 2](./chapter_2.md)
-- [Chapter 3](./chapter_3.md)
+- [Lab 1: Introduction to Flutter](./chapter_1.md)
+- [Lab 2: Widgets and Layout](./chapter_2.md)
+- [Lab 3: Lists and UI Components](./chapter_3.md)
