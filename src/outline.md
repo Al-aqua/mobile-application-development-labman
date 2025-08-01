@@ -1,250 +1,72 @@
 # Mobile Application Development with Flutter
 
-## Personal Finance Tracker Course Outline
+## Flutter Personal Finance Tracker Course Outline
 
-### **Lab 1: Introduction to Flutter and Setting Up the Environment**
+### Lab 1: Introduction to Flutter
 
-**Objectives:**
+- Set up Flutter development environment
+- Create the initial app with AppBar and basic scaffold
+- Introduce "Hello World" and hot reload concepts
+- Project component: App shell with title "My Finance Tracker"
 
-- Install Flutter SDK and development environment
-- Create first Flutter project
-- Understand project structure
-- Build and run a simple "Hello World" app
+### Lab 2: Widgets and Layout
 
-**Project Component:**
+- Design the dashboard layout with cards for summary info
+- Implement balance overview section with static data
+- Project component: Main dashboard with balance, income/expense cards
 
-- Create the base Personal Finance Tracker project
-- Run the app on emulator/device
+### Lab 3: Lists and UI Components
 
-**Key Concepts:**
+- Create transaction list with ListTile widgets
+- Add transaction item UI with amount, date, category
+- Implement custom transaction card design
+- Project component: Scrollable transaction history list
 
-- Flutter architecture overview
-- Hot reload and hot restart
-- Project structure (lib, pubspec.yaml, etc.)
+### Lab 4: State Management
 
----
+- Implement adding/removing transactions
+- Create transaction model class
+- Use setState for UI updates after transactions change
+- Project component: Working "Add Transaction" button with state updates
 
-### **Lab 2: Flutter Widgets and Layout Fundamentals**
+### Lab 5: Forms and Input
 
-**Objectives:**
+- Build transaction entry form with validation
+- Add category selection dropdown
+- Implement date picker integration
+- Project component: Complete transaction entry form with validation
 
-- Master core widgets: Container, Column, Row, Text, Icon
-- Understand layout principles and widget tree
-- Create responsive layouts
-- Style widgets with colors, padding, and margins
+### Lab 6: Navigation
 
-**Project Component:**
+- Create transaction detail screen
+- Implement bottom navigation bar for different views
+- Add settings/profile screen
+- Project component: Multi-screen navigation structure
 
-- Design the main dashboard UI
-- Create expense/income summary cards
-- Build basic navigation structure with AppBar and BottomNavigationBar
+### Lab 7: Local Storage
 
-**Key Concepts:**
+- Design SQLite database schema for transactions
+- Implement CRUD operations for transactions
+- Add persistent storage for user preferences
+- Project component: Full local data persistence
 
-- Widget composition
-- Layout widgets (Column, Row, Stack, Expanded)
-- Styling and theming basics
+### Lab 8: RESTful APIs
 
----
+- Integrate currency conversion API (https://frankfurter.dev/)
+- Fetch financial tips from external source
+- Implement loading indicators and error handling
+- Project component: Currency conversion feature
 
-### **Lab 3: Lists and Basic User Interface Components**
+### Lab 9: Firebase Integration
 
-**Objectives:**
+- Add user authentication
+- Implement cloud backup of transactions
+- Create data synchronization between devices
+- Project component: User account system with cloud sync
 
-- Implement ListView and ListTile widgets
-- Create static forms and input fields
-- Understand basic widget interactions
-- Build reusable UI components
+### Lab 10: Polish and Deployment
 
-**Project Component:**
-
-- Create static transaction list view with mock data
-- Build "Add Transaction" form UI (without functionality)
-- Design transaction cards/tiles
-- Add floating action button (UI only)
-
-**Key Concepts:**
-
-- ListView.builder for dynamic lists
-- TextField widgets (without controllers yet)
-- Basic form layouts
-- UI composition and reusable widgets
-
----
-
-### **Lab 4: State Management with setState and Controllers**
-
-**Objectives:**
-
-- Understand state management concepts
-- Master setState() for local state
-- Work with TextEditingController
-- Handle form data and user interactions
-
-**Project Component:**
-
-- Connect TextEditingControllers to form fields
-- Implement transaction addition with setState
-- Add form validation and error handling
-- Make the transaction list dynamic
-
-**Key Concepts:**
-
-- StatefulWidget lifecycle
-- TextEditingController management
-- setState() for updating UI
-- Form controllers and data handling
-- Input validation
-
----
-
-### **Lab 5: Advanced State Management with Riverpod**
-
-**Objectives:**
-
-- Understand limitations of setState
-- Implement Riverpod state management
-- Create providers and notifiers
-- Separate business logic from UI
-
-**Project Component:**
-
-- Create Transaction model class
-- Implement StateNotifierProvider for transaction management
-- Refactor existing code to use Riverpod
-- Add category management with providers
-
-**Key Concepts:**
-
-- Riverpod package setup and ProviderScope
-- StateNotifier and StateNotifierProvider
-- Consumer and ConsumerWidget
-- Provider types (Provider, StateProvider, FutureProvider)
-- Model classes and data structures
-- Separation of concerns
-
----
-
-### **Lab 6: Navigation and Multi-Screen Apps**
-
-**Objectives:**
-
-- Implement navigation between screens
-- Pass data between routes
-- Create tabbed interfaces
-- Handle back navigation and app lifecycle
-
-**Project Component:**
-
-- Create separate screens: Dashboard, Transactions, Categories, Settings
-- Implement bottom navigation
-- Add transaction detail screen
-- Create settings screen with user preferences
-
-**Key Concepts:**
-
-- Navigator and routing
-- MaterialPageRoute and named routes
-- Passing data with route arguments
-- TabBar and TabBarView
-
----
-
-### **Lab 7: Local Data Persistence with SQLite**
-
-**Objectives:**
-
-- Set up SQLite database
-- Create database schema
-- Implement CRUD operations
-- Handle database migrations
-
-**Project Component:**
-
-- Create database helper class
-- Implement transaction storage and retrieval
-- Add data persistence for categories
-- Implement search and filtering functionality
-
-**Key Concepts:**
-
-- sqflite package
-- Database design and SQL basics
-- Async/await and Future handling
-- Data access layer pattern
-
----
-
-### **Lab 8: Working with RESTful APIs**
-
-**Objectives:**
-
-- Understand HTTP requests and responses
-- Implement API integration
-- Handle network errors and loading states
-- Parse JSON data
-
-**Project Component:**
-
-- Integrate currency exchange rate API
-- Add expense categorization with external API
-- Implement data synchronization
-- Add network connectivity checks
-
-**Key Concepts:**
-
-- http package and API calls
-- JSON serialization/deserialization
-- Error handling and try-catch
-- FutureBuilder widget
-- Loading indicators and user feedback
-
----
-
-### **Lab 9: Firebase Integration and Cloud Storage**
-
-**Objectives:**
-
-- Set up Firebase project
-- Implement user authentication
-- Store data in Firestore
-- Handle real-time data updates
-
-**Project Component:**
-
-- Add user registration and login
-- Sync transactions to cloud
-- Implement multi-device data access
-- Add backup and restore functionality
-
-**Key Concepts:**
-
-- Firebase setup and configuration
-- Firebase Auth for user management
-- Firestore database operations
-- StreamBuilder for real-time updates
-
----
-
-### **Lab 10: App Polish, Testing, and Deployment**
-
-**Objectives:**
-
+- Implement theming and dark mode
 - Add app icons and splash screens
-- Implement error handling and user feedback
-- Write basic unit tests
-- Prepare app for deployment
-
-**Project Component:**
-
-- Add app theming and dark mode
-- Create app store-ready build
-
-**Key Concepts:**
-
-- App deployment process
-- Testing strategies
-- Performance optimization
-- User experience best practices
-
----
+- Optimize performance and run tests
+- Project component: Production-ready app with deployment preparation
