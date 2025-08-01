@@ -716,6 +716,11 @@ appBar: AppBar(
 ),
 ```
 
+## Exercises 4: Organize your code
+
+- Move the `DashboardScreen` widget to a new file named `dashboard_screen.dart`.
+- Move every widget in the `lib/main.dart` file to its own file in the `lib/widgets/` directory.
+
 ## Deliverables
 
 By the end of this lab, you should have:
