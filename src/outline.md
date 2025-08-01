@@ -11,6 +11,7 @@
 
 ### Lab 2: Widgets and Layout
 
+- Understand the basics layout widgets (Padding, Container, Column, Row, etc.)
 - Design the dashboard layout with cards for summary info
 - Implement balance overview section with static data
 - Project component: Main dashboard with balance, income/expense cards

@@ -225,7 +225,7 @@ Let's break down what this code does:
   - `theme` - The color scheme and visual properties
   - `home` - The main widget to display
 
-- `HomePage` - A StatelessWidget that creates our main screen
+- `DashboardScreen` - A StatelessWidget that creates our main screen
   - `Scaffold` - Provides the basic material design layout
   - `AppBar` - The top bar with the app title
   - `body` - The main content area
