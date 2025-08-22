@@ -7,3 +7,4 @@
 - [Lab 3: Lists and UI Components](./chapter_3.md)
 - [Lab 4: State Management](./chapter_4.md)
 - [Lab 5: Forms and Input](./chapter_5.md)
+- [Lab 6: Navigation](./chapter_6.md)
